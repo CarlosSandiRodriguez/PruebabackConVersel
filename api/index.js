@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors');
+const port = 3000
 
 
 app.use(express.json())
@@ -25,15 +26,18 @@ app.use(cors({
 }));
 
 // Ruta base para utilizar el servicio
-
+app.get("/api", function(req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('SERVIDOR SISTEMA');
+});
 
 app.get("/", (req, res) => res.send("Express on Vercel"));
 
 
+
 app.use("/api/teacher", login);
 
- 
-app.listen(3000, () => console.log("Server ready on port 3000."));
 
-module.exports = app;
+ 
+
 
