@@ -32,10 +32,7 @@ app.get("/api", function(req, res) {
 });
 
 
-
-
-//app.use("/api/teacher", login);
-
+app.use("/api/teacher", login);
 
  
 app.listen(port, () => {

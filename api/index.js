@@ -38,6 +38,7 @@ app.get("/", (req, res) => res.send("Express on Vercel"));
 app.use("/api/teacher", login);
 
 
- 
+ module.exports = app;
+
 
 
